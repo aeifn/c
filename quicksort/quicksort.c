@@ -1,10 +1,10 @@
-# include <stdio.h>
-# define stacksize 10
-#define arrsize 20
+#include <stdio.h>
+#define STACKSIZE 10
+#define ARRSIZE 20
 int top1 = -1, top2 = -1;
-int stack1[stacksize];
-int stack2[stacksize];
-int arr[arrsize];
+int stack1[STACKSIZE];
+int stack2[STACKSIZE];
+int arr[ARRSIZE];
 int quick(int, int);
 void pushstk1(int);
 void pushstk2(int);
@@ -15,7 +15,7 @@ int main() {
         int sindex, eindex, lindex, uindex, k, pivot, i, len;
         printf("Введите размер массива: ");
         scanf("%d", &len);
-        printf("Введите числа:\n", len);
+        printf("Введите числа (%d):\n", len);
         for (i = 0; i <= len - 1; i++)
                 scanf("%d", &arr[i]); lindex = 0;
         uindex = len - 1; pushstk1(lindex); pushstk2(uindex);
