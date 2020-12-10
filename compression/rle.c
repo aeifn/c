@@ -2,6 +2,10 @@
   Author: Egor Kuzmichev
   RLE comporession algorithm
   MSU 2020
+
+  Example usage:
+  > echo aaaabbbcc | ./a.out
+  4a3b2c
 *************************************/
 #include <stdio.h>
 
