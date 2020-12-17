@@ -7,7 +7,7 @@
   Example usage:
 
   echo aaaaaaaaaa | ./a.out
-  aa10
+  *10a%
 
   echo ababababab | ./a.out
   ababababab
@@ -26,9 +26,10 @@ int main() {
             if(counter==1){
                 putchar(prev);
             } else {
-                putchar(prev);
-                putchar(prev);
+                // special character *
+                printf("%s","*");
                 printf("%d", counter);
+                putchar(prev);
             }
             counter=1;
         }
