@@ -1,11 +1,17 @@
 /************************************
+  
   Author: Egor Kuzmichev
   RLE comporession algorithm
   MSU 2020
 
   Example usage:
-  > echo aaaabbbcc | ./a.out
-  4a3b2c
+
+  echo aaaaaaaaaa | ./a.out
+  aa10
+
+  echo ababababab | ./a.out
+  ababababab
+
 *************************************/
 #include <stdio.h>
 
@@ -17,8 +23,13 @@ int main() {
         if (cur==prev || prev==EOF) {
             counter++;
         } else {
-            printf("%d", counter);
-            putchar(prev);
+            if(counter==1){
+                putchar(prev);
+            } else {
+                putchar(prev);
+                putchar(prev);
+                printf("%d", counter);
+            }
             counter=1;
         }
         prev=cur;
