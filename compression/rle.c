@@ -29,6 +29,8 @@ int main() {
                 // special character *
                 printf("%s","*");
                 printf("%d", counter);
+                if(counter>9) 
+                    printf("%s","*");
                 putchar(prev);
             }
             counter=1;
