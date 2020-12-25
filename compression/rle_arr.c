@@ -1,3 +1,11 @@
+/************************************
+  
+  Author: Egor Kuzmichev
+  RLE comporession algorithm
+  MSU 2020
+
+*************************************/
+
 #include <stdio.h>
 
 #define MAX 10
